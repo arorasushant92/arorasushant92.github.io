@@ -1,0 +1,467 @@
+/* =========================
+   BASIC RESET & GLOBAL
+   ========================= */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #f8f9fa;
+  }
+  
+  /* =========================
+     NAVBAR
+     ========================= */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: #fff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.3s ease; /* For mobile slide-in effect */
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ffd700;
+  }
+  
+  /* Hamburger (Mobile) */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+  }
+  
+  /* Resume button */
+  .nav-links .resume-btn {
+    background: #ffd700; /* Gold */
+    color: #000 !important; /* Force black text */
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    margin-left: 1rem;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-links .resume-btn:hover {
+    background: #e6c100; /* Darker gold on hover */
+    color: #000 !important;
+  }
+  
+  /* For toggling the mobile menu open */
+  .nav-open {
+    transform: translateX(0);
+  }
+  
+  /* =========================
+     HERO SECTION
+     ========================= */
+  .hero {
+    height: 100vh;
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("front page imgae.jpg") center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+    color: #fff;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 0.5rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .highlight {
+    color: #ffd700;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .hero-content p {
+    color: #f1f1f1;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #ffd700;
+    color: #222;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #e6c100;
+  }
+  
+  /* =========================
+     SECTION HEADINGS
+     ========================= */
+  .section-heading {
+    text-align: center;
+    margin: 3rem 0 2rem;
+  }
+  
+  .section-heading h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .section-heading hr {
+    width: 60px;
+    height: 4px;
+    background: #ffd700;
+    border: none;
+    margin: 1rem auto;
+  }
+  
+  /* =========================
+     ABOUT SECTION
+     ========================= */
+  .about {
+    padding: 2rem;
+    background-color: #fff;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-text {
+    flex: 1 1 60%; 
+    max-width: 800px; 
+    line-height: 1.8; 
+    text-align: justify;
+  }
+  
+  .about-image {
+    flex: 1 1 30%; 
+    text-align: center;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 4px solid #ffd700;
+  }
+  
+  /* =========================
+     EXPERIENCE & PROJECTS
+     ========================= */
+  .exp-projects {
+    padding: 2rem;
+  }
+  
+  .exp-project-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .flip-card {
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .flip-card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+  }
+  
+  .flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .flip-card-front h3 {
+    position: absolute;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .flip-card-back {
+    background: #f8f8f8;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .flip-card-back p {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .flip-card-back .btn {
+    background: #ffd700;
+    color: #222;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .flip-card-back .btn:hover {
+    background: #e6c100;
+  }
+  
+  /* =========================
+     WORK TIMELINE (EXPERIENCE)
+     ========================= */
+  .experience {
+    padding: 2rem;
+    background: #fff;
+  }
+  
+  .timeline {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .timeline-item {
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-item h4 {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* =========================
+     EDUCATION
+     ========================= */
+  .education {
+    padding: 2rem;
+  }
+  
+  .education-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .edu-item {
+    margin-bottom: 2rem;
+  }
+  
+  .edu-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .edu-item h4 {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* =========================
+     CONTACT
+     ========================= */
+  .contact {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-info {
+    margin-top: 1rem;
+  }
+  
+  .contact-info p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-info a {
+    color: #222;
+    text-decoration: underline;
+  }
+  
+  .contact-logos {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Final gap value used */
+    margin-top: 20px;
+  }
+  
+  .contact-logo {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-logo:hover {
+    transform: scale(1.1);
+  }
+  
+  /* =========================
+     FOOTER
+     ========================= */
+  footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* =========================
+     MEDIA QUERIES
+     ========================= */
+  
+  /* Up to 768px: Mobile Layout */
+  @media (max-width: 768px) {
+    /* NAVBAR Mobile Menu */
+    .nav-links {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      flex-direction: column;
+      background: #333;
+      width: 200px;
+      transform: translateX(100%);
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    /* About Section */
+    .about-content {
+      flex-direction: column;
+    }
+  
+    /* Experience & Projects: single column */
+    .exp-project-cards {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Hero Section adjustments */
+    .hero {
+      height: auto;
+      padding: 4rem 2rem;
+    }
+  
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-content h2 {
+      font-size: 1.25rem;
+    }
+  
+    .btn {
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  /* 768px to 1024px: Tablet Layout */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .exp-project-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  

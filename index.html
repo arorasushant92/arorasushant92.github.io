@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Analyst Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar">
+    <div class="logo">Sushant Arora</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#exp-projects">Work Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <!-- NEW RESUME BUTTON -->
+      <li>
+        <!-- Update `resume.pdf` with the path to your actual resume file -->
+        <a class="resume-btn" href="Sushant Arora resumeB.pdf" target="_blank">Resume</a>
+      </li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </nav>
+
+  <!-- ====== HERO SECTION ====== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Hello, I'm <span class="highlight">Sushant Arora</span></h1>
+      <h2>Data-Driven Analyst | Strategic Thinker | Transforming Insights into Actionable Strategies</h2>
+      <p></p>
+      <a href="#exp-projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT SECTION ====== -->
+  <section class="about" id="about">
+    <div class="section-heading">
+      <h2>About Me</h2>
+      <hr />
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          <h4>
+            A seasoned analytics professional with extensive experience in healthcare, e-commerce and supply chain, marketing, finance, and 
+            pharmaceutical data. Demonstrated a proven track record of developing and executing data-driven solutions, leveraging expertise 
+            in SQL, Python, Tableau, PowerBI, and cloud platforms. Successfully managed a diverse client base, driving significant improvements
+            in healthcare outcomes and cost reduction. Led initiatives in e-commerce and marketing to boost conversion rates and streamline 
+            supply chain operations, and managed pharmaceutical data projects to improve claims processing and forecasting. Adept in 
+            project management, ensuring timely delivery and measurable impact.
+          </h4>
+        </p>
+        <p></p>
+      </div>
+      <div class="about-image">
+        <img
+          src="Profilepic.jpg"
+          alt="Profile Picture"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== EXPERIENCE PROJECTS SECTION ====== -->
+  <section class="exp-projects" id="exp-projects">
+    <div class="section-heading">
+      <h2>Work Experience</h2>
+      <hr />
+    </div>
+    <!-- Flip-cards Container -->
+    <div class="exp-project-cards">
+      <!-- CARD 1 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- FRONT -->
+          <div class="flip-card-front">
+            <img src="HAN IT .jpeg" alt="Project 1 Image" />
+            <h3>Business Intelligence Analyst</h3>
+          </div>
+          <!-- BACK -->
+          <div class="flip-card-back">
+            
+            <a href="exp1.html" class="btn">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="injured_workers_pharmacy_logo.jpeg" alt="Project 2 Image" />
+            <h3>Operations Data Analyst</h3>
+          </div>
+          <div class="flip-card-back">
+         
+            <a href="exp2.html" class="btn">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="exl_health_logo.jpeg" alt="Project 3 Image" />
+            <h3>Business Data Analyst</h3>
+          </div>
+          <div class="flip-card-back">
+        
+            <a href="exp3.html" class="btn">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="northeastern log.png" alt="Project 4 Image" />
+            <h3>Research and Data Analyst</h3>
+          </div>
+          <div class="flip-card-back">
+           
+            <a href="exp4.html" class="btn">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="Valiosaaa.png" alt="Project 5 Image" />
+            <h3>Business Data Analyst</h3>
+          </div>
+          <div class="flip-card-back">
+      
+            <a href="exp5.html" class="btn">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="Mystery room logoo.jpeg" alt="Project 6 Image" />
+            <h3>Project 6</h3>
+          </div>
+          <div class="flip-card-back">
+          
+            <a href="exp6.html" class="btn">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== EDUCATION SECTION ====== -->
+  <section class="education" id="education">
+    <div class="section-heading">
+      <h2>Education</h2>
+      <hr />
+    </div>
+    <div class="education-content">
+      <div class="edu-item">
+        <h3>M.Sc. in Project Management and Data Analytics</h3>
+        <h4>Northeastern University (2019 - 2021)</h4>
+        <p>
+          Specialized in Data Science. 
+          <p>
+            Courses: Introduction to Analytics, Probability Theory & Statistics, Data Mining, 
+            Intermediate Analytics, Data Warehousing & SQL, Business Intelligence tools,
+            Statistics, Machine Learning, Data Mining, and Advanced Python.
+          </p>
+          <br>
+          <h3>B.Sc. in Architecture</h3>
+          <h4>MBS SPA (2010 - 2015)</h4>
+        </p>
+      </div>
+      <div class="edu-item">
+        <h3>Online Certifications</h3>
+        <ul>
+          <li>MySQL Essential Traning</li>
+          <li>PowerBI: Dashboard for Beginners</li>
+          <li>Learning R</li>
+          <li>Learning Python</li>
+          <li>Project Management : Preventing Scope Creep</li>
+          <li>Project Management Foundations</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT SECTION ====== -->
+<!-- ====== CONTACT SECTION ====== -->
+<section class="contact" id="contact">
+  <div class="section-heading">
+    <h2>Contact</h2>
+    <hr />
+  </div>
+  <div class="contact-content">
+    <p>
+      <h2>Get In Touch!</h2>
+    </p>
+    <!-- <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:arorasushant92@gmail.com">arorasushant92@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arora-sushant/">https://www.linkedin.com/in/arora-sushant/</a></p>
+      <p><strong>Tableau:</strong> <a href="https://public.tableau.com/app/profile/sushant8805/vizzes">https://public.tableau.com/app/profile/sushant8805/vizzes</a></p>
+    </div> -->
+    <div class="contact-logos">
+      <a href="https://www.linkedin.com/in/arora-sushant/" target="_blank">
+        <img src="Linkedin logo.png" alt="LinkedIn" class="contact-logo" />
+      </a>
+      <a href="mailto:arorasushant92@gmail.com">
+        <img src="email logo.png" alt="Email" class="contact-logo" />
+      </a>
+      <a href="https://public.tableau.com/app/profile/sushant8805/vizzes" target="_blank">
+        <img src="tableau logo.png" alt="Tableau" class="contact-logo" />
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>&copy; 2025 Sushant Arora. All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+
+    function toggleMenu() {
+  const navLinks = document.getElementById("navLinks");
+  navLinks.classList.toggle("nav-open");
+}
+
+  </script>
+</body>
+</html>
+
